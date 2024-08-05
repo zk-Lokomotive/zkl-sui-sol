@@ -19,12 +19,11 @@ import config from "../../config/config.json";
 
 // Initialize providers and "signers"
 const suiProvider = new JsonRpcProvider(config.sui.rpc_url);
-
+const suiSigner = new RawSigner(suiKeypair, suiProvider);
+// const suiSigner = new RawSigner(config.sui.private_key);
 const suiKeypair = Ed25519Keypair.fromSecretKey(
   Buffer.from(config.sui.private_key, "hex"),
 );
-const suiSigner = new RawSigner(suiKeypair, suiProvider);
-// const suiSigner = new RawSigner(config.sui.private_key);
 
 const solanaConnection = new Connection(config.solana.rpc_url);
 const solanaKeypair = Keypair.fromSecretKey(
@@ -34,11 +33,12 @@ const solanaKeypair = Keypair.fromSecretKey(
 const WORMHOLE_RPC_HOST = "https://wormhole-v2-testnet-api.certus.one";
 
 export async function bridgeFileToSolana(
-  suiObjectId: string,
+  arweaveUrl: string,
+  // suiObjectId: string,
   recipientAddress: string,
 ): Promise<string> {
   try {
-    console.log("Starting the bridging process from Sui to Solana...");
+    console.log("⌱ Starting the bridging process from Sui to Solana...");
 
     // Step 1: Transfer the file object from "Sui"
     console.log("Initiating transfer from Sui...");
