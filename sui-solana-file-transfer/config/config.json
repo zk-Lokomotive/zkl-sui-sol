@@ -1,19 +1,21 @@
 {
   "sui": {
-    "rpc_url": "https://fullnode.devnet.sui.io:443",
-    "private_key": "SUI_PRIVATE_KEY"
+    "rpc_url": "https://fullnode.testnet.sui.io:443",
+    "package_id": "YOUR_SUI_PACKAGE_ID",
+    "private_key": "YOUR_SUI_PRIVATE_KEY"
   },
   "solana": {
-    "rpc_url": "https://api.devnet.solana.com",
-    "private_key": "SOLANA_PRIVATE_KEY"
-  },
-  "arweave": {
-    "host": "arweave.net",
-    "port": 443,
-    "protocol": "https",
-    "key": "ARWEAVE_KEY_JSON"
+    "rpc_url": "https://api.testnet.solana.com",
+    "program_id": "YOUR_SOLANA_PROGRAM_ID",
+    "private_key": "YOUR_SOLANA_PRIVATE_KEY"
   },
   "wormhole": {
-    "bridge_address": "WORMHOLE_BRIDGE_ADDRESS"
+    "sui": {
+      "core_state_object_id": "YOUR_SUI_CORE_STATE_OBJECT_ID",
+      "core_bridge_address": "YOUR_SUI_CORE_BRIDGE_ADDRESS"
+    },
+    "solana": {
+      "core_bridge_address": "YOUR_SOLANA_CORE_BRIDGE_ADDRESS"
+    }
   }
 }
