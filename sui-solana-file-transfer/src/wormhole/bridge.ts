@@ -13,6 +13,7 @@ import {
 } from "@certusone/wormhole-sdk";
 import { Connection, Keypair, PublicKey } from "@solana/web3.js";
 import { Ed25519Keypair, JsonRpcProvider, RawSigner } from "@mysten/sui.js";
+import { SuiTransactionBlockResponse } from "@mysten/sui.js/client";
 // import { ethers } from "ethers";
 import config from "../../config/config.json";
 
