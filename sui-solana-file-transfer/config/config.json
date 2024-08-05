@@ -1,19 +1,19 @@
 {
   "sui": {
     "rpc_url": "https://fullnode.devnet.sui.io:443",
-    "private_key": "YOUR_SUI_PRIVATE_KEY"
+    "private_key": "SUI_PRIVATE_KEY"
   },
   "solana": {
     "rpc_url": "https://api.devnet.solana.com",
-    "private_key": "YOUR_SOLANA_PRIVATE_KEY"
+    "private_key": "SOLANA_PRIVATE_KEY"
   },
   "arweave": {
     "host": "arweave.net",
     "port": 443,
     "protocol": "https",
-    "key": "YOUR_ARWEAVE_KEY_JSON"
+    "key": "ARWEAVE_KEY_JSON"
   },
   "wormhole": {
-    "bridge_address": "YOUR_WORMHOLE_BRIDGE_ADDRESS"
+    "bridge_address": "WORMHOLE_BRIDGE_ADDRESS"
   }
 }
