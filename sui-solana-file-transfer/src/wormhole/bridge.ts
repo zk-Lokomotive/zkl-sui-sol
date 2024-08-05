@@ -19,10 +19,12 @@ import config from "../../config/config.json";
 
 // Initialize providers and "signers"
 const suiProvider = new JsonRpcProvider(config.sui.rpc_url);
+
 const suiKeypair = Ed25519Keypair.fromSecretKey(
   Buffer.from(config.sui.private_key, "hex"),
 );
 const suiSigner = new RawSigner(suiKeypair, suiProvider);
+// const suiSigner = new RawSigner(config.sui.private_key);
 
 const solanaConnection = new Connection(config.solana.rpc_url);
 const solanaKeypair = Keypair.fromSecretKey(
